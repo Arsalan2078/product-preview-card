@@ -11,7 +11,7 @@ function ProductPicture({
       <img
         src={imgMobile}
         alt={`Image of ${productName}`}
-        className="h-full w-full rounded-t-xl object-cover sm:rounded-none sm:rounded-l-xl"
+        className="rounded-t-xl object-cover sm:rounded-none sm:rounded-l-xl"
       />
     </picture>
   );

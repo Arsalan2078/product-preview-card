@@ -15,8 +15,8 @@ function ProductPreviewCard({
   productPrice,
 }: ProductPreviewCardProps) {
   return (
-    <div className="product-preview-card bg-pure-white max-w-card flex flex-col items-center justify-center rounded-xl sm:flex-row">
-      <div className="flex-1">
+    <div className="product-preview-card flex max-w-card flex-col items-center justify-center rounded-xl bg-pure-white sm:flex-row">
+      <div className="flex flex-1">
         <ProductPicture
           imgDesktop={imgDesktop}
           imgMobile={imgMobile}
@@ -24,15 +24,15 @@ function ProductPreviewCard({
         />
       </div>
 
-      <div className="flex-1">
-        <div className="flex flex-grow flex-col gap-6 p-8">
-          <div className="flex flex-col gap-4">
+      <div className="flex h-full flex-1">
+        <div className="flex flex-col justify-between gap-8 p-8 sm:gap-0">
+          <div className="flex flex-col gap-4 sm:gap-5">
             <ProductCategory productCategory={productCategory} />
             <ProductName productName={productName} />
             <ProductDescription productDescription={productDescription} />
           </div>
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 sm:gap-6">
             <ProductPrice
               original={productPrice.original}
               discounted={productPrice.discounted}
