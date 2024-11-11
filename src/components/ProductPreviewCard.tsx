@@ -15,22 +15,33 @@ function ProductPreviewCard({
   productPrice,
 }: ProductPreviewCardProps) {
   return (
-    <div className="product-preview-card">
-      <ProductPicture
-        imgDesktop={imgDesktop}
-        imgMobile={imgMobile}
-        productName={productName}
-      />
+    <div className="product-preview-card bg-pure-white max-w-card flex flex-col items-center justify-center rounded-xl sm:flex-row">
+      <div className="flex-1">
+        <ProductPicture
+          imgDesktop={imgDesktop}
+          imgMobile={imgMobile}
+          productName={productName}
+        />
+      </div>
 
-      <ProductCategory productCategory={productCategory} />
-      <ProductName productName={productName} />
-      <ProductDescription productDescription={productDescription} />
-      <ProductPrice
-        original={productPrice.original}
-        discounted={productPrice.discounted}
-      />
+      <div className="flex-1">
+        <div className="flex flex-grow flex-col gap-6 p-8">
+          <div className="flex flex-col gap-4">
+            <ProductCategory productCategory={productCategory} />
+            <ProductName productName={productName} />
+            <ProductDescription productDescription={productDescription} />
+          </div>
 
-      <AddToCart />
+          <div className="flex flex-col gap-5">
+            <ProductPrice
+              original={productPrice.original}
+              discounted={productPrice.discounted}
+            />
+
+            <AddToCart />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

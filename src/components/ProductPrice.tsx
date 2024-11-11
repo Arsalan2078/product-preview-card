@@ -6,9 +6,13 @@ function ProductPrice({
   discounted,
 }: ProductPreviewCardProps["productPrice"]) {
   return (
-    <div className="product-price">
-      <p className="price-original">{FormatCurrency(original)}</p>
-      <p className="price-discounted">{FormatCurrency(discounted)}</p>
+    <div className="product-price flex flex-row items-center gap-5">
+      <p className="price-discounted text-preset-display text-deep-aquamarine">
+        {FormatCurrency(discounted)}
+      </p>
+      <p className="price-original text-preset-body text-aurometal-saurus line-through">
+        {FormatCurrency(original)}
+      </p>
     </div>
   );
 }
